@@ -5,14 +5,20 @@ export default class ItemRepositoryMemory implements ItemRepository {
   items: Item[];
 
   constructor() {
-    this.items = [
-      new Item(1, "Guitarra", 1000),
-      new Item(2, "Amp", 5000),
-      new Item(3, "Cable", 30)
-    ];
+    this.items = [];
   }
 
-  getById(idItem: number): Item | undefined {
-    return this.items.find(item => item.idItem === idItem);
+  async save(item: Item): Promise<void> {
+    this.items.push(item);
+  }
+
+  async list(): Promise<Item[]> {
+    return this.items;
+  }
+
+  async get(idItem: number): Promise<Item> {
+    const item = this.items.find(item => item.idItem === idItem);
+		if (!item) throw new Error("Item not found");
+		return item;
   }
 }
