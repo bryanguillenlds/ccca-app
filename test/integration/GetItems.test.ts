@@ -1,4 +1,4 @@
-import GetItems from "../../src/application/usecase/GetItem";
+import GetItems from "../../src/application/GetItem";
 import Dimension from "../../src/domain/entity/Dimension";
 import Item from "../../src/domain/entity/Item";
 import ItemRepositoryMemory from "../../src/infra/repository/memory/ItemRepositoryMemory";

@@ -1,4 +1,4 @@
-import ItemRepository from "../../domain/repository/ItemRepository";
+import ItemRepository from "../domain/repository/ItemRepository";
 
 export default class GetItems {
 

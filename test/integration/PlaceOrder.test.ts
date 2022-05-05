@@ -1,7 +1,7 @@
 // import CouponRepositoryMemory from "../../src/infra/repository/memory/CouponRepositoryMemory";
 import ItemRepositoryMemory from "../../src/infra/repository/memory/ItemRepositoryMemory";
 import OrderRepositoryMemory from "../../src/infra/repository/memory/OrderRepositoryMemory";
-import PlaceOrder from "../../src/application/usecase/PlaceOrder";
+import PlaceOrder from "../../src/application/PlaceOrder";
 import Item from "../../src/domain/entity/Item";
 import Dimension from "../../src/domain/entity/Dimension";
 
