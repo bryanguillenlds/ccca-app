@@ -9,8 +9,14 @@ export default class CouponRepositoryMemory implements CouponRepository {
       new Coupon("VALE20", 20)
     ];
   }
+  
+  async save(coupon: Coupon): Promise<void> {
+    this.coupons.push(coupon);
+  }
 
-  getByCode(code: string): Coupon | undefined {
-    return this.coupons.find(coupon => coupon.code === code);
+  async getByCode(code: string): Promise<Coupon> {
+    const coupon = this.coupons.find(coupon => coupon.code === code);
+    if (!coupon) throw new Error("Coupon not found");
+    return coupon;
   }
 }
