@@ -44,3 +44,8 @@ test("Deve criar um pedido com 3 itens e calcular o frete", function() {
   const total = order.getTotal();
   expect(total).toBe(6350);
 });
+
+test("Deve criar um pedido com 3 itens e gerar codigo valido (AAAPPPPPPPP)", function() {
+  const order = new Order("935.411.347-80", new Date("2021-03-01T10:00:00"));
+  expect(order.code.value).toBe("202100000001");
+});
