@@ -1,6 +1,6 @@
 import Coupon from "../entity/Coupon";
 
 export default interface CouponRepository {
-  getByCode(code: string): Promise<Coupon>;
-  save(coupon: Coupon): Promise<void>;
+	get(code: string): Promise<Coupon>;
+	save(coupon: Coupon): Promise<void>;
 }

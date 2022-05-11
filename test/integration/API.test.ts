@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 test.skip("Deve chamar /items", async function () {
 	const response = await axios({

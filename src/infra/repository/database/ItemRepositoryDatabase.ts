@@ -1,6 +1,6 @@
+import Connection from "../../database/Connection";
 import Item from "../../../domain/entity/Item";
 import ItemRepository from "../../../domain/repository/ItemRepository";
-import Connection from "../../database/Connection";
 
 export default class ItemRepositoryDatabase implements ItemRepository {
 
