@@ -8,7 +8,7 @@ import Coupon from "../../src/domain/entity/Coupon";
 import OrderRepositoryDatabase from "../../src/infra/repository/database/OrderRepositoryDatabase";
 import PgPromiseConnectionAdapter from "../../src/infra/database/PgPromiseConnectionAdapter";
 
-test.skip("Deve fazer um pedido", async function () {
+test("Deve fazer um pedido", async function () {
 	const itemRepository = new ItemRepositoryMemory();
 	itemRepository.save(new Item(1, "Guitarra", 1000, new Dimension(100, 30, 10), 3));
 	itemRepository.save(new Item(2, "Amplificador", 5000, new Dimension(50, 50, 50), 20));
