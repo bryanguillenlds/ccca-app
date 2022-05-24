@@ -23,7 +23,7 @@ beforeEach(async function () {
 	await orderRepository.clear();
 });
 
-test.skip("Deve chamar /items", async function () {
+test("Deve chamar /items", async function () {
 	const response = await axios({
 		url: "http://localhost:3000/items",
 		method: "get"
@@ -32,7 +32,7 @@ test.skip("Deve chamar /items", async function () {
 	expect(items).toHaveLength(3);
 });
 
-test.skip("Deve chamar /orders", async function () {
+test("Deve chamar /orders", async function () {
 	const itemRepository = new ItemRepositoryMemory();
 	itemRepository.save(new Item(1, "Guitarra", 1000, new Dimension(100, 30, 10), 3));
 	itemRepository.save(new Item(2, "Amplificador", 5000, new Dimension(50, 50, 50), 20));
@@ -60,7 +60,7 @@ test.skip("Deve chamar /orders", async function () {
 	expect(orders).toHaveLength(2);
 });
 
-test.skip("Deve chamar /orders/code", async function () {
+test("Deve chamar /orders/code", async function () {
 	const itemRepository = new ItemRepositoryMemory();
 	itemRepository.save(new Item(1, "Guitarra", 1000, new Dimension(100, 30, 10), 3));
 	itemRepository.save(new Item(2, "Amplificador", 5000, new Dimension(50, 50, 50), 20));
